@@ -23,4 +23,19 @@
     background-color: #ff9999;
     border-left: 6px solid #993333;
   }
+  p {
+    text-transform: uppercase;
+    padding: 5px;
+  }
   
+   p#first{
+    background-color: goldenrod;
+  }
+  
+   p#second{
+    background-color: silver;
+  }
+  
+   p#third{
+    background-color: #CD7F32;
+  }
