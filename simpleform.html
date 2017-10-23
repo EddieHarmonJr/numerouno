@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        First name:
+        <br>
+        <input type="text" name="firstname">
+        <br> Last name:
+        <br>
+        <input type="text" name="lastname">
+        <br> Address:
+        <br>
+        <input type="text" name="address">
+        <br>
+        <p>What state is your favorite location in?</p>
+        <select name="state">
+            <option value="IL">IL</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NY">NY</option>
+            <option value="VA">VA</option>
+        </select>
+        <br> Password:
+        <br>
+        <input type="password" name="password" size="15" maxlength="30" />
+        <br>
+
+
+        <p>Have you ever attended an NBA game in-person?</p>
+        <input type="checkbox" name="attendance" value="yes" checked="checked" /> Yes
+        <input type="checkbox" name="attendance" value="no" /> No
+
+
+        <p>Who do you think is most likely to win MVP this season?
+            <br />
+            <input type="radio" name="mvp" value="lebron" checked="checked" /> Lebron James
+            <input type="radio" name="mvp" value="russell" /> Russell Westbrook
+            <input type="radio" name="mvp" value="kevin" /> Kevin Durant
+            <input type="radio" name="mvp" value="steph" /> Steph Curry
+
+        </p>
+
+        <p>What do you think of this form?</p>
+        <textarea name="comments" id="" cols="30" rows="10">Leave your comments here...</textarea>
+<br>
+<input type="submit" name="Send Answers" value="Send Answers">
+<br>
+<button type="reset" value="Reset">Reset</button>
+
+
+    </form>
+</body>
+
+</html>

@@ -1,74 +1,27 @@
 var readline = require('readline')
+const fs = require('fs');
 
-var options = 'list, show n, reserve n, occupancy n max, search amenity'
+var options = 'list, show n, reserve n, occupancy n max, search amenity, save'
 
 var rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 })
 
-var rooms = [
-    {
-        price: 200,
-        location: '11 Broadway, NY',
-        maxOccupants: 3,
-        amenities: ['washer/dryer', 'wifi', 'cable']
-    },
-    {
-        price: 100,
-        location: '11 Delancey, NY',
-        maxOccupants: 1,
-        amenities: []
-    },
-    {
-        price: 2000,
-        location: '1 Park Pl, NY',
-        maxOccupants: 2,
-        amenities: ['pool', 'valet', 'butler', 'private dog walker & whisperer']
-    },
-    {
-        price: 90000,
-        location: '1 Broad St, NY',
-        maxOccupants: 33,
-        amenities: ['disco ball']
-    },
-    {
-        price: 2000,
-        location: '2312 144th St, NY',
-        maxOccupants: 4,
-        amenities: []
-    },
-    {
-        price: 200000,
-        location: '47-10 Austell Pl, NY',
-        maxOccupants: 200,
-        amenities: ['drill', 'sometimes wifi', 'luna']
-    },
-    {
-        price: 0,
-        location: 'Times Square, NY',
-        maxOccupants: 3,
-        amenities: ['sewage water', 'hagglers', 'naked cowboy']
-    },
-    {
-        price: 200000,
-        location: '1600 Pennsylvania Ave, DC',
-        maxOccupants: 500,
-        amenities: ['nixon\'s bowling', 'orange hairpiece', 'oval office', 'pair of small hands']
-    },
-    {
-        price: 2000000,
-        location: 'Falchi Bldg, NY',
-        maxOccupants: 5000,
-        amenities: ['food truck']
-    },
-    {
-        price: 250,
-        location: 'Washington Pl, NY',
-        maxOccupants: 100,
-        amenities: ['fountain', 'dosa cart']
-    }    
-];
+var rooms;
+
+
+fs.readFile('rooms.json', function(err, file) {  
+    if (err) throw err;
+    rooms = JSON.parse(file);
+});
+
+function save() {
+    fs.writeFileSync('rooms.json', JSON.stringify(rooms), function(err) {
+        if (err) throw err;
+    });
+    console.log("Saved.")
+}
 
 // make the string exactly as long as len
 function padTo(str, len) {
@@ -172,7 +125,13 @@ rl.on('line', function(input) {
         occupancy(inputArr[1] - 1, inputArr[2])
     } else if (inputArr[0] === 'search') {
         amenitySearch(inputArr[0], amenity )
-    } else {
+    } else if (inputArr[0] === 'save'){
+        save()
+    } else if (inputArr[0] === 'quit'){
+        save()
+        process.exit
+    } else
+     {
         console.log('Unknown command: ' + input)
     }
 

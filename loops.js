@@ -104,18 +104,19 @@
 //     var i = 1
 //     while (i <= 100){
 //      if (i % 3 === 0 && i % 5 === 0) {
-//             console.log("FizzBuzz")
-//      }else if (i % 3 === 0) {
-//             console.log("Fizz")
-//     }else if (i % 5 === 0) {
-//             console.log("Buzz")
-//     }else {
-//             console.log(i)
+//         console.log("FizzBuzz")
+//      } else if (i % 3 === 0) {
+//         console.log("Fizz")
+//     } else if (i % 5 === 0) {
+//         console.log("Buzz")
+//     } else {
+//         console.log(i)
+//     }
+//         i += 1
 //         }
-//             i += 1
-//             }}
+//     }
 
-//             fizzOrBuzz()
+//     console.log(fizzOrBuzz())
 
 // function bottles(){
     
@@ -139,19 +140,19 @@
 // # # #
 //  # # #
 
-function makeBoard(num) {
-    var board = '';
-    for (var row = 0; row < num; row++) {
-        for (var column = 0; column < num; column++) {
-            if ((column + row) % 2 === 0) {
-                board += '#';
-            } else {
-                board += ' ';
-            }
-        }
-        board += '\n';
-    }
-    return board;
-}
+// function makeBoard(num) {
+//     var board = '';
+//     for (var row = 0; row < num; row++) {
+//         for (var column = 0; column < num; column++) {
+//             if ((column + row) % 2 === 0) {
+//                 board += '#';
+//             } else {
+//                 board += ' ';
+//             }
+//         }
+//         board += '\n';
+//     }
+//     return board;
+// }
 
-console.log(makeBoard(8));
+// console.log(makeBoard(8));
