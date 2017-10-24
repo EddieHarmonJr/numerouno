@@ -1,0 +1,47 @@
+#navigation {
+    /* background-color: lightgrey; */
+    width: 50%;
+    
+    }
+
+    #navigation ul {
+        padding: 0;
+        margin-left: 0;
+    }
+        
+    #navigation li {
+        display: inline;
+        margin-right: 1em;
+        background-color: grey;
+        padding: 1em;
+        
+    }
+        
+    #case {
+        background-color: lightgray;
+        margin: 0;
+        padding: 1em;
+        width: 50%;
+        
+    }
+        
+    #footer {
+        background-color: grey;
+        margin: 0;
+        width: 50%;
+        padding: 1em;
+        
+    }
+        
+    #footer ul {
+        margin: 0;          
+        
+    }
+        
+    #footer  li {
+        display: inline;  
+        margin: 0;        
+     
+    }
+
+        
