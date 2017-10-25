@@ -1,0 +1,44 @@
+#container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#sidebar {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    /* right: 90%; */
+    /* margin: 0; */
+    background-color: green;
+
+}
+
+body {
+    background-color: pink;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin: 10px;
+}
+
+#content {
+    position: relative;
+    width: 80%;
+    /* align-content: left; */
+    margin: 21%;
+    margin-top: 0;
+}
+
+@media print {
+    #sidebar {
+        display: none;
+    }
+}
+
