@@ -3,3 +3,9 @@
     width: 40em;
     position: center;
 }
+
+@media (max-width: 961px) {
+    #content {
+        width: 30em;
+    }
+}
