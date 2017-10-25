@@ -1,0 +1,11 @@
+input.submit {
+     visibility: hidden;
+}
+
+input:focus {
+    background-color: yellow;
+}
+
+input:valid {
+    border-color: green;
+}
