@@ -1,0 +1,15 @@
+{
+  "name": "calculator-api-one-route",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculator-api-one-route.js",
+  "scripts": {
+    "start": "nodemon calculator-api-one-route",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
